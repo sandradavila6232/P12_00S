@@ -162,53 +162,53 @@ body{
   <section id="wrap">
 
     <div class="eyebrow">
-      KONSOLE KEAMANAN B41M
+      SECURITY CONSOLE B41M
     </div>
 
     <h1 id="state">
-      Mendeteksi firmware...
+      Detecting firmware...
     </h1>
 
     <div id="det"></div>
     <div id="cache"></div>
 
-    <a class="change-choice" href="../index.html?change=1">
-      GANTI PILIHAN FIRMWARE
-    </a>
+    <!-- <a class="change-choice" href="../index.html?change=1"> -->
+      <!-- CHANGE FIRMWARE OPTIONS -->
+    <!-- </a> -->
 
   </section>
 
-  <footer class="footer">
+  <!-- <footer class="footer"> -->
 
-    <div class="footer-info">
-      [ALAMAT]
-      <span class="footer-value">
-        Jl. Tahir, Muara Jawa, Kukar, KAL-TIM, Indonesia.
-      </span>
-    </div>
+    <!-- <div class="footer-info"> -->
+      <!-- [ALAMAT] -->
+      <!-- <span class="footer-value"> -->
+        <!-- Jl. Tahir, Muara Jawa, Kukar, KAL-TIM, Indonesia. -->
+      <!-- </span> -->
+    <!-- </div> -->
 
-    <div class="footer-info">
-      [KONTAK]
-      <span class="footer-value">
-        085555551497
-      </span>
-    </div>
+    <!-- <div class="footer-info"> -->
+      <!-- [KONTAK] -->
+      <!-- <span class="footer-value"> -->
+        <!-- 085555551497 -->
+      <!-- </span> -->
+    <!-- </div> -->
 
-    <div class="footer-info">
-      [COPYRIGHT]
-      <span class="footer-value">
-        © 2026 B41M 17PlayBox
-      </span>
-    </div>
+    <!-- <div class="footer-info"> -->
+      <!-- [COPYRIGHT] -->
+      <!-- <span class="footer-value"> -->
+        <!-- © 2026 B41M 17PlayBox -->
+      <!-- </span> -->
+    <!-- </div> -->
 
-    <div class="footer-info">
-      [PEMILIK]
-      <span class="footer-value">
-        Ibrahim Yusuf
-      </span>
-    </div>
+    <!-- <div class="footer-info"> -->
+      <!-- [PEMILIK] -->
+      <!-- <span class="footer-value"> -->
+        <!-- Ibrahim Yusuf -->
+      <!-- </span> -->
+    <!-- </div> -->
 
-  </footer>
+  <!-- </footer> -->
 
 </main>
 <script>
@@ -242,10 +242,10 @@ body{
     } else {
         why = key + " -- no working bug (lapse ends at 12.02, poops needs 12.50)";
     }
-    detEl.innerHTML = "ошибка: <b>" + (key || "не удалось определить прошивку") + "</b>"
-        + " &middot; ошибка: <b>" + (bug || "несовместимая система") + "</b> &middot; " + why;
+    detEl.innerHTML = "error: <b>" + (key || "the firmware could not be identified") + "</b>"
+        + " &middot; error: <b>" + (bug || "incompatible system") + "</b> &middot; " + why;
 
-    if (!bug) { setState("НЕСОВМЕСТИМАЯ ПРОШИВКА", "bad"); return; }
+    if (!bug) { setState("INCOMPATIBLE FIRMWARE", "bad"); return; }
 
     var target = (bug === "lapse" ? "run_lapse.html" : "run_poops.html")
         + location.search;
