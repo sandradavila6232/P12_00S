@@ -15,7 +15,7 @@ export const REQUIRED_KEYS = [
 export const OPTIONAL_KEYS = [
     "k_stubs", "wk___imp_pthread_create", "k_pthread_create",
     // Overrides the patch-blob name, which otherwise derives from the firmware
-    // key ("13.00 - 13.04" -> patches/1300.bin). Needed when two firmwares share one
+    // key ("13.00" -> patches/1300.bin). Needed when two firmwares share one
     // kernel and therefore one blob.
     "kpatch",
     // Names the firmware this block was copied from. Purely declarative -- no
@@ -418,16 +418,6 @@ export const PS4 = {
 //
 // A copy rather than a shared reference, so its fw_status can say where the
 // data came from without rewriting 12.00's.
-
-PS4["11.52"] = Object.assign({}, PS4["11.50"], {
-    alias_of: "11.50",
-    fw_status: "state=UNTESTED-on-hardware shares=11.50 "
-        + "webkit=assumed-identical-to-11.50 "
-        + "kernel_rvas=untested-vs-dump "
-        + "kpatch=1150.bin",
-    kpatch: "1150.bin",
-});
-
 PS4["12.02"] = Object.assign({}, PS4["12.00"], {
     alias_of: "12.00",
     fw_status: "state=UNTESTED-on-hardware shares=12.00 "
